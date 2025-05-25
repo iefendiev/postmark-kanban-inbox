@@ -8,7 +8,7 @@ Here's how it works:
 
 1. A customer sends an email to your Postmark inbound address (e.g. support@yourdomain).
 2. The email payload is received by a webhook and parsed by the backend.
-3. Using a **language model (Hugging Face)**, the email's subject and body are analyzed to automatically infer the ticket's **category** and **priority**.
+3. Using a **language model (bart-large-mnli)**, the email's subject and body are analyzed to automatically infer the ticket's **category** and **priority**.
 4. A ticket is created and displayed in the frontend Kanban board.
 5. Support team members can drag and drop tickets across columns like **Open**, **In Progress**, **Replied**, and **Resolved** — mimicking a real-world support workflow.
 6. Once the issue is resolved, the ticket is moved to the **Resolved** column — completing the support loop.
