@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "used for postmark's inbound webhook URL",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "author": "ipek efendiev",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.7.0",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.2",
+    "@types/lodash": "^4.17.17",
+    "@types/node": "^22.15.21",
+    "@types/node-fetch": "^2.6.12",
+    "prisma": "^6.8.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}

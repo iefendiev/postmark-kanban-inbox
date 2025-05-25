@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  REPLIED
+  RESOLVED
+}
+
+enum TicketPriority {
+  HIGH
+  NORMAL
+  LOW
+}
+
+enum TicketCategory {
+  BILLING
+  ACCOUNT
+  TECHNICAL
+  GENERAL
+}
+
+model Ticket {
+  id          String   @id @default(uuid())
+  subject     String
+  from        String
+  fromName    String?
+  to          String?
+  cc          String?     // raw string format
+  bcc         String?     // raw string format
+  replyTo     String?
+  date        DateTime
+  messageId   String?
+  textBody    String?
+  htmlBody    String?
+  strippedReply String?
+
+  category    TicketCategory?
+  priority    TicketPriority?
+  status      TicketStatus? @default(OPEN)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  attachments Json?
+}

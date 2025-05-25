@@ -1,0 +1,48 @@
+[
+  {
+    "From": "jane.doe@example.com",
+    "Subject": "Payment Declined",
+    "TextBody": "Hey, I am having an issue processing my payment, can you please help ASAP?",
+    "Date": "2025-05-25T10:00:00Z",
+    "To": "support@example.com",
+    "ReplyTo": "jane.doe@example.com"
+  },
+  {
+    "From": "john.doe@example.com",
+    "Subject": "Trouble Logging In",
+    "TextBody": "Hi, I forgot my password and the reset link isn’t working. What can I do?",
+    "Date": "2025-05-25T10:05:00Z",
+    "To": "support@example.com"
+  },
+  {
+    "From": "mark@startup.io",
+    "Subject": "Dashboard keeps crashing",
+    "TextBody": "Every time I open the analytics dashboard, the page freezes. This is urgent.",
+    "Date": "2025-05-25T10:10:00Z",
+    "To": "support@example.com",
+    "ReplyTo": "mark@startup.io"
+  },
+  {
+    "From": "finance@company.org",
+    "Subject": "Can I get a copy of my last invoice?",
+    "TextBody": "Hi, I just need a copy of the invoice from March if possible. Thanks!",
+    "Date": "2025-05-25T10:15:00Z",
+    "To": "support@example.com"
+  },
+  {
+    "From": "user123@random.com",
+    "Subject": "Just wanted to say thank you!",
+    "TextBody": "Hey team — not an issue here, just wanted to say I love your product!",
+    "Date": "2025-05-25T10:20:00Z",
+    "To": "support@example.com",
+    "ReplyTo": "user123@random.com"
+  },
+  {
+    "From": "old.email@example.com",
+    "Subject": "Change email address",
+    "TextBody": "Hi, I’d like to update my account email to new.email@example.com when you get a chance.",
+    "Date": "2025-05-25T10:25:00Z",
+    "To": "support@example.com",
+    "ReplyTo": "old.email@example.com"
+  }
+]
