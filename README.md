@@ -2,13 +2,13 @@
 
 ## 📌 Overview
 
-This app is a simple, end-to-end **email-based ticket management system** powered by Postmark’s **inbound email parsing** feature.
+This app is a simple, end-to-end **email-based ticket management system** powered by Postmark's **inbound email parsing** feature.
 
-Here’s how it works:
+Here's how it works:
 
 1. A customer sends an email to your Postmark inbound address (e.g. support@yourdomain).
 2. The email payload is received by a webhook and parsed by the backend.
-3. Using a **language model (Hugging Face)**, the email's subject and body are analyzed to automatically infer the ticket’s **category** and **priority**.
+3. Using a **language model (Hugging Face)**, the email's subject and body are analyzed to automatically infer the ticket's **category** and **priority**.
 4. A ticket is created and displayed in the frontend Kanban board.
 5. Support team members can drag and drop tickets across columns like **Open**, **In Progress**, **Replied**, and **Resolved** — mimicking a real-world support workflow.
 6. Once the issue is resolved, the ticket is moved to the **Resolved** column — completing the support loop.
@@ -81,6 +81,18 @@ npm run dev
 
 Send an email to the address provided by Postmark. The message will appear on the Kanban board automatically.
 
+> 💡 **Tip:** If you're running the backend locally, you can expose it to Postmark using [`ngrok`](https://ngrok.com/):
+>
+> ```bash
+> ngrok http 3000
+> ```
+>
+> Then use the generated URL (e.g. `https://abc123.ngrok-free.app/api/emails/inbound`) as your Postmark **inbound webhook URL**:
+>
+> ```
+> e.g. `h4sh3d@inbound.postmarkapp.com`
+> ```
+
 Alternatively, you can use the provided `postmarkWebhookTest.json` file to simulate incoming emails. With your server running, execute this command in your terminal:
 
 ```bash
@@ -103,17 +115,26 @@ HF_API_KEY=your_token_here
 
 > ⚠️ For production, consider deploying with a proxy server or secure secrets management.
 
+## 🎥 Demo
+
+![Demo in action](./assets/app-demo.gif)
+
 ## 📂 Project Structure
 
 ```
 .
 ├── client/ # React frontend
-│   ├── components/
-│   └── hooks/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   └── lib/
+│   └── ...
 ├── server/ # Express backend
 │   ├── routes/
 │   ├── services/
-│   └── prisma/
+│   ├── controllers/
+│   ├── prisma/
+│   └── ...
 └── README.md
 ```
 
