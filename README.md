@@ -141,7 +141,7 @@ HF_API_KEY=your_token_here
 ## 🧪 Roadmap / What's Next
 
 - [ ] Add response support (reply to email from UI)
-- [ ] API contact and typesafe communication using OpenAPI (e.g. zod-to-openapi or tRPC + OpenAPI plugin)
+- [ ] API contract and typesafe communication using OpenAPI (e.g. zod-to-openapi or tRPC + OpenAPI plugin)
 - [ ] Pagination or archived tickets view
 - [ ] Auth layer for multi-user support
 - [ ] Email threading / grouping
