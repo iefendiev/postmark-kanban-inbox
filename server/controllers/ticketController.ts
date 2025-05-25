@@ -1,4 +1,4 @@
-import { Request, RequestHandler, Response } from 'express';
+import { Request, Response } from 'express';
 import {
   getAllTickets,
   getTicketById,
