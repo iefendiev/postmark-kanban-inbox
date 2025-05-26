@@ -22,7 +22,7 @@ const Kanban = () => {
 
     const timeout = setTimeout(() => {
       setLastResolvedTicket('');
-    }, 10000);
+    }, 6000);
 
     return () => clearTimeout(timeout);
   }, [lastResolvedTicket]);
